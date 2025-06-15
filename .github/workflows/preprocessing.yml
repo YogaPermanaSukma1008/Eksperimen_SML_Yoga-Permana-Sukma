@@ -21,6 +21,12 @@ jobs:
         working-directory: ./preprocessing
         run: |
           pip install -r requirements.txt
+      
+      - name: 📥 Download dataset
+        working-directory: ./preprocessing
+        run: |
+          mkdir -p loandata_raw
+          gdown --id 1zRWhL7er-dFskMrpGaNeUPlUiGYLVn6w -O loandata_raw/loan_data.csv
 
       - name: Run Automate script
         working-directory: ./preprocessing
