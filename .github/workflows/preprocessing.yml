@@ -2,9 +2,8 @@ name: Preprocessing Workflow
 
 on:
   push:
-    paths:
-      - '**/*.py'
-      - '.github/workflows/preprocessing.yml'
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
   preprocessing:
